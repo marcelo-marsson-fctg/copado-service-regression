@@ -18,7 +18,7 @@ End suite
 
 
 Login
-    [Documentation]      Login to Salesforce instance
+    [Documentation]      Login to Salesforce instance Using JWT and MFA if needed
     Jwt Authenticate    ${client_id}    ${persona_username}    ${server_key}    sandbox=True
     Jwt Login           /lightning/page/home
     # We'll check if variable ${secret} is given. If yes, fill the MFA dialog.
