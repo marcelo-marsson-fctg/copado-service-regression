@@ -16,10 +16,8 @@ End suite
 
 Login
     [Documentation]      Login to Salesforce instance
-    GoTo                 ${login_url}
-    TypeText             Username                    ${username}
-    TypeSecret           Password                    ${password}
-    ClickText            Log In
+    Jwt Authenticate    ${client_id}    ${persona_username}    ${server_key}    sandbox=True
+    Jwt Login           /lightning/page/home
     # We'll check if variable ${secret} is given. If yes, fill the MFA dialog.
     # If not, MFA is not expected.
     # ${secret} is ${None} unless specifically given.
