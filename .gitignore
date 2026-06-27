@@ -1,0 +1,12 @@
+# Robot Framework / Copado Robotic Testing outputs
+output.xml
+log.html
+report.html
+*.robotlog
+results/
+output/
+
+# Editor / OS
+.idea/
+.vscode/
+.DS_Store
