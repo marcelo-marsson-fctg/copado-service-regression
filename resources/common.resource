@@ -25,7 +25,9 @@ Login
     # If not, MFA is not expected.
     # ${secret} is ${None} unless specifically given.
     ${MFA_needed}=       Run Keyword And Return Status          Should Not Be Equal    ${None}       ${persona_mfa_key}
-    Run Keyword If       ${MFA_needed}               Fill MFA   ${persona_username}         ${persona_mfa_key}    ${login_url}    
+    Run Keyword If       ${MFA_needed}               Fill MFA   ${persona_username}         ${persona_mfa_key}    ${login_url}
+    ClickElement         App Launcher
+    ClickItem            Home
 
 
 Fill MFA
