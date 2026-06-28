@@ -54,14 +54,8 @@ TC_102 Manual Feedback Case Creation Via New Feedback Global Action And Field Ma
 *** Keywords ***
 Authenticate And Open Leisure Service
     [Documentation]    JWT-authenticate as a Sales & Service Agent and open the Leisure Service app.
-    OpenBrowser                 about:blank    chrome
-    Jwt Authenticate            ${client_id}    ${persona_service_agent}    ${server_key}    sandbox=True
-    Jwt Login                   /lightning/page/home
-    VerifyTitle                 Home | Salesforce
-    ClickElement                xpath=//button[@title='App Launcher']
-    ClickElement                xpath=//input[contains(@placeholder,'Search apps')]
-    TypeText                    Search apps and items...        Leisure Service
-    ClickText                   Leisure Service
+    Login
+    LaunchApp                  Leisure Service
 
 Open Global Action New Feedback
     # The Global Actions trigger is an <a> with class="globalCreateTrigger" (title is empty).
