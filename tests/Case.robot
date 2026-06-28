@@ -15,8 +15,8 @@ ${BROWSER}                  chrome
 # defaults. CONFIRM IN CRT: replace with valid picklist options for your org, or override
 # via CRT variables.
 ${TC102_STATUS}             New
-${TC102_TYPE}               Feedback
-${TC102_CASE_CATEGORY}      ${EMPTY}      # CONFIRM IN CRT: a valid "Case Category" picklist value
+${TC102_TYPE}               Booking Dispute
+${TC102_CASE_CATEGORY}      Missed TTL      # CONFIRM IN CRT: a valid "Case Category" picklist value
 ${TC102_CASE_SUBCATEGORY}   ${EMPTY}      # CONFIRM IN CRT: a valid "Case Sub-category" value (if applicable)
 ${TC102_RECORD_ID}          ${EMPTY}      # captured after save; used by teardown to clean up
 ${TC102_CASE_NUMBER}        ${EMPTY}      # captured at runtime from the saved record
